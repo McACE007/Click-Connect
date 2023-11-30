@@ -1,0 +1,41 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:equatable/equatable.dart';
+
+class PostEntity extends Equatable {
+  final String? postId;
+  final String? creatorUid;
+  final String? username;
+  final String? decription;
+  final String? postImageUrl;
+  final List<String>? likes;
+  final num? totalLikes;
+  final num? totalComments;
+  final Timestamp? createAt;
+  final String? userProfileUrl;
+
+  const PostEntity({
+    this.postId,
+    this.creatorUid,
+    this.username,
+    this.decription,
+    this.postImageUrl,
+    this.likes,
+    this.totalLikes,
+    this.totalComments,
+    this.createAt,
+    this.userProfileUrl,
+  });
+  @override
+  List<Object?> get props => [
+        postId,
+        creatorUid,
+        username,
+        decription,
+        postImageUrl,
+        likes,
+        totalLikes,
+        totalComments,
+        createAt,
+        userProfileUrl,
+      ];
+}
